@@ -1,14 +1,15 @@
 var randomNumber;
 window.onload = function()
 {
-    function getRandomInt(max) {
+
+    document.getElementById('btnCheck').addEventListener('click', checkGuess);
+}
+function checkGuess(e){
+        function getRandomInt(max) {
         return Math.floor(Math.random() * max);
       }
     randomNumber = getRandomInt(2);
     console.log(randomNumber);
-    document.getElementById('btnCheck').addEventListener('click', checkGuess);
-}
-function checkGuess(e){
     var userGuess = document.getElementById('guess').value;
     if(userGuess == randomNumber)
     {
