@@ -21,6 +21,9 @@ function checkGuess(e){
         var y = document.getElementById('card');
         y.style.display = "block";  
     }
+    else if(userGuess == 10){
+    alert("Please Select any Options.");
+    }
     else
     {
         document.getElementById('wl').innerHTML = "Loss";
