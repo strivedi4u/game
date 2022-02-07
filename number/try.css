@@ -1,0 +1,93 @@
+
+    
+*{margin:0px;
+padding:0;}
+
+a:hover {
+    color: rgba(73, 241, 6, 0.952);
+  }
+.footer{
+    position: fixed;
+ bottom:0px;
+ background-color: brown;
+ display: inline-block;
+  padding:0px;
+  width:100%;
+}
+
+#nav{
+    
+    animation:design 3s linear infinite ;
+}
+
+@keyframes design{
+    0%{
+    color:red;}
+    25%{
+    color:green;}
+    50%{
+    color:blue;}
+    75%{
+    color:pink;}
+}
+
+
+.facebook {
+  background: #3B5998;
+  color: white;
+  float:left;
+  width:20%;
+  font-size:22px;
+  height:50px;
+ 
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+  width:20%;
+  font-size:22px;
+ float:left;
+  height:50px;
+  
+}
+
+.google {
+  background: #1be34a;
+  color: white;
+width:20%;
+  height:50px;
+  font-size:22px;
+  float:left;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+ float:left;
+  height:50px;
+  font-size:22px;
+  width:20%;
+}
+
+.youtube {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  color: white;
+ float:left;
+  height:50px;
+  font-size:22px;
+ width:20%;
+}
+          body {
+  background-image: url("./no.png");
+   /* The image used */
+ background-color: rgba(205, 247, 200, 0.795);
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  /* background-blend-mode: color; */
+  
+}
+
+    
