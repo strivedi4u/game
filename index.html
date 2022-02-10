@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toss</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./toss.css" />
-<script src="./toss.js"></script>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <link rel="stylesheet" href="./toss.css" />
+    <script src="./toss.js"></script> 
+        
 </head>
 <body>
+    <section  id="game" style="display: none;">
     <nav class="navbar fixed-top navbar-light bg-light">
          
         <br><br>
@@ -115,6 +121,93 @@
   
 
 </div></div>
+</section>
 
+
+
+
+<div  id="login" style="display: block;" class="login-form">
+
+      <h2 class="text-center">Log in</h2>       
+      <div class="form-group">
+          <input id="email"  type="text" class="form-control" placeholder="Username" required="required">
+      </div>
+      <div class="form-group">
+          <input id="password" type="password" class="form-control" placeholder="Password" required="required">
+      </div>
+      <div class="form-group">
+          <button onclick="signIn()" id="signIn"  type="submit" class="btn btn-primary btn-block">Log in</button>
+      </div>
+      <div class="clearfix">
+          <!-- label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+          <a href="#" class="pull-right">Forgot Password?</a -->
+      </div>        
+  
+  <!-- p class="text-center"><a href="#">Create an Account</a></p -->
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./firebase.js"></script>
+
+
+<script>
+
+function signIn(){
+
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+
+
+firebase.auth().signInWithEmailAndPassword(email.value, password.value).then((success) => {
+    
+  var log = document.getElementById('login');
+  var gam = document.getElementById('game');
+  log.style.display = "none";
+  gam.style.display = "block";
+
+    
+});
+
+}
+
+
+</script>
 </body>
 </html>
